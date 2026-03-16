@@ -44,6 +44,9 @@ const handleSubmit =  async (e) =>{
     setEmail("");
     setPassword("");
     setPhone("");
+     setTimeout(() => {
+    setSuccess("");
+  }, 5000);
 
 
     
