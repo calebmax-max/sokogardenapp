@@ -12,6 +12,8 @@ const Addproducts = () => {
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState("");
   const [error, setError] = useState("");
+
+  
   // create a functon that will handle the submit action
   const handleSubmit = async (e) =>{
     // prevent the site from reloading
@@ -43,6 +45,11 @@ const Addproducts = () => {
        setProduct_description("");
        setProduct_cost("");
        setProduct_photo("");
+
+        e.target.reset()
+        setTimeout(() => {
+        setSuccess("");
+      }, 5000);
 
     }
     catch(error){
